@@ -2,7 +2,11 @@
 
 int main(void)
 {
-    printf("Hello, World!\n");
-
+    printf("            *\n");
+    printf("          *\n");
+    printf("        *\n");
+    printf("*     *\n");
+    printf(" *  *\n");
+    printf("  *\n");
     return 0;
 }
