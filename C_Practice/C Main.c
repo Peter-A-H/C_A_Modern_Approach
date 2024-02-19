@@ -1,18 +1,18 @@
 #include <stdio.h>
-
-// Computes the dimensional weight of a 12"x10"x8" box
+#define FREEZING_PT 32.0f
+#define SCALE_FACTOR (5.0f / 9.0f)
 
 int main(void)
 {
-    const int HEIGHT = 8;
-    const int LENGTH = 12;
-    const int WIDTH = 10;
-    int volume = HEIGHT * LENGTH * WIDTH;
-    int weight = (volume + 165) / 166;
+    float fahrenheit = 0.0f;
+    float celsius = 0.0f;
 
-    printf("Dimensions: %dx%dx%d\n", LENGTH, WIDTH, HEIGHT);
-    printf("Volume (cubic inches): %d\n", volume);
-    printf("Dimensional weight (pounds): %d\n", weight);
+    printf("Enter Fahrenheit temperature: ");
+    (void)scanf("%f", &fahrenheit);
+
+    celsius = (fahrenheit - FREEZING_PT) * SCALE_FACTOR;
+
+    printf("Celsius equivalent: %.1f\n", celsius);
 
     return 0;
 }
