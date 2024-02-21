@@ -7,20 +7,16 @@ int main(void)
     int amount = 0;
     (void)scanf("%d", &amount);
 
-    int twenties = 0;
-    twenties = amount / 20;
+    int twenties = amount / 20;
     amount -= twenties * 20;
 
-    int tens = 0;
-    tens = amount / 10;
+    int tens = amount / 10;
     amount -= tens * 10;
 
-    int fives = 0;
-    fives = amount / 5;
+    int fives = amount / 5;
     amount -= fives * 5;
 
-    int pound = 0;
-    pound = amount / 1;
+    int pound = amount / 1;
     amount -= pound * 1;
 
     printf("\x9C" "20 pound notes: %d\n", twenties);
