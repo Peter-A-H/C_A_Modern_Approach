@@ -2,31 +2,13 @@
 
 int main(void)
 {
-    printf("Enter the first (single) digit: ");
-    int d = 0;
-    (void)scanf("%1d", &d);
+    printf("Enter a two-digit number: ");
+    int numberEntered = 0;
+    (void)scanf("%d", &numberEntered);
 
-    printf("Enter the first group of five digits: ");
-    int a1 = 0;
-    int a2 = 0;
-    int a3 = 0;
-    int a4 = 0;
-    int a5 = 0;
-    (void)scanf("%1d%1d%1d%1d%1d", &a1, &a2, &a3, &a4, &a5);
-
-    printf("Enter the second group of five digits: ");
-    int b1 = 0;
-    int b2 = 0;
-    int b3 = 0;
-    int b4 = 0;
-    int b5 = 0;
-    (void)scanf("%1d%1d%1d%1d%1d", &b1, &b2, &b3, &b4, &b5);
-
-    int firstSum = d + a2 + a4 + b1 + b3 + b5;
-    int secondSum = a1 + a3 + a5 + b2 + b4;
-    int total = 3 * firstSum + secondSum;
-
-    printf("Check digit: %d\n", 9 - ((total - 1) % 10));
+    int firstDigit = numberEntered / 10;
+    int secondDigit = numberEntered % 10;
+    printf("The reversal is %d%d", secondDigit, firstDigit);
 
     return 0;
 }
